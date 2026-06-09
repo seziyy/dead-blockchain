@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --color-bg: 242 239 232;
+  --color-surface: 255 253 246;
+  --color-elevated: 231 228 219;
+  --color-text: 18 18 18;
+  --color-muted: 67 67 67;
+  --color-line: 40 40 40;
+  --color-accent: 215 25 32;
+  --shadow-hard: 3px 3px 0 rgb(var(--color-line));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: rgb(var(--color-bg));
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 44px 44px;
+  color: rgb(var(--color-text));
+  font-family: var(--font-body), "Inter Tight", "Neue Haas Grotesk", Arial, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+.editorial-heading {
+  font-family: var(--font-display), "Arial Black", Impact, sans-serif;
+  letter-spacing: 0;
+}
+
+::selection {
+  background: rgb(var(--color-accent));
+  color: rgb(var(--color-surface));
+}
+
+.glass {
+  border: 2px solid rgb(var(--color-line));
+  border-radius: 8px;
+  background: rgb(var(--color-surface));
+  box-shadow: var(--shadow-hard);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.glass:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 rgb(var(--color-line));
+}
+
+.lab-border {
+  border: 2px solid rgb(var(--color-line));
+}
+
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid rgb(var(--color-accent));
+  outline-offset: 3px;
+}
+
+.chart-panel {
+  min-height: 320px;
+}
+
+.brutal-button {
+  border: 2px solid rgb(var(--color-line));
+  border-radius: 6px;
+  background: rgb(var(--color-surface));
+  box-shadow: 2px 2px 0 rgb(var(--color-line));
+  color: rgb(var(--color-text));
+  text-transform: uppercase;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.brutal-button:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 rgb(var(--color-line));
+}
+
+.accent-stamp {
+  background: rgb(var(--color-accent));
+  color: rgb(var(--color-surface));
+  overflow-wrap: anywhere;
+}
+
+.robot-face {
+  display: inline-block;
+  transform-origin: 50% 54%;
+}
