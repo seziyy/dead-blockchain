@@ -9,7 +9,7 @@ import { DeadnessScoreGauge } from "@/components/DeadnessScoreGauge";
 
 const statusStyle = {
   Alive: "bg-app-surface text-app-text",
-  "Mixed Activity": "bg-app-elevated text-app-text",
+  Watchlist: "bg-app-elevated text-app-text",
   "Bot-Dominated": "accent-stamp",
   "Mostly Dead": "accent-stamp"
 };
@@ -31,8 +31,7 @@ export function ChainCard({ chain, index }: { chain: ChainMetric; index: number 
             </span>
             <h2 className="min-w-0 break-words text-2xl font-black uppercase leading-none text-app-text">{chain.name}</h2>
           </div>
-          <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
-            <p className="font-mono text-xs font-bold uppercase text-app-muted">{chain.ticker} research profile</p>
+          <div className="mt-3 flex flex-wrap items-center gap-2">
             <span className={cn("max-w-full rounded-sm border-2 border-app-line px-2.5 py-1 text-xs font-black uppercase", statusStyle[chain.status])}>
               {chain.status}
             </span>

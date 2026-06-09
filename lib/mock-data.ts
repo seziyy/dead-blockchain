@@ -742,7 +742,7 @@ export const methodologySignals = [
 
 export const scoringLevels = [
   { range: "0-25", label: "Mostly Human", copy: "Human presence appears dominant." },
-  { range: "26-50", label: "Mixed Activity", copy: "Automation is visible but not overwhelming." },
+  { range: "26-50", label: "Watchlist", copy: "Automation is visible enough to justify a closer review." },
   { range: "51-75", label: "Bot-Heavy", copy: "Automated behavior likely drives a major share." },
   { range: "76-100", label: "Dead Chain Signal", copy: "Human presence is no longer the dominant signal." }
 ];

@@ -1,12 +1,12 @@
 export type ChainStatus =
   | "Alive"
-  | "Mixed Activity"
+  | "Watchlist"
   | "Bot-Dominated"
   | "Mostly Dead";
 
 export type ScoreLevel =
   | "Mostly Human"
-  | "Mixed Activity"
+  | "Watchlist"
   | "Bot-Heavy"
   | "Dead Chain Signal";
 

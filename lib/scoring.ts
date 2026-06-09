@@ -33,14 +33,14 @@ export function calculateDeadnessScore(input: {
 
 export function getScoreLevel(score: number): ScoreLevel {
   if (score <= 25) return "Mostly Human";
-  if (score <= 50) return "Mixed Activity";
+  if (score <= 50) return "Watchlist";
   if (score <= 75) return "Bot-Heavy";
   return "Dead Chain Signal";
 }
 
 export function getStatus(score: number): ChainStatus {
   if (score <= 25) return "Alive";
-  if (score <= 50) return "Mixed Activity";
+  if (score <= 50) return "Watchlist";
   if (score <= 75) return "Bot-Dominated";
   return "Mostly Dead";
 }

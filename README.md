@@ -116,7 +116,7 @@ low_governance_or_social_activity_placeholder * 0.15
 Score levels:
 
 - `0-25`: Mostly Human
-- `26-50`: Mixed Activity
+- `26-50`: Watchlist
 - `51-75`: Bot-Heavy
 - `76-100`: Dead Chain Signal
 
