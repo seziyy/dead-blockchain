@@ -31,16 +31,22 @@ export function ChainCard({ chain, index }: { chain: ChainMetric; index: number 
             </span>
             <h2 className="min-w-0 break-words text-2xl font-black uppercase leading-none text-app-text">{chain.name}</h2>
           </div>
-          <div className="mt-3 flex flex-wrap items-center gap-2">
-            <span className={cn("max-w-full rounded-sm border-2 border-app-line px-2.5 py-1 text-xs font-black uppercase", statusStyle[chain.status])}>
-              {chain.status}
-            </span>
-          </div>
+          {chain.status !== "Watchlist" ? (
+            <div className="mt-3 flex flex-wrap items-center gap-2">
+              <span className={cn("max-w-full rounded-sm border-2 border-app-line px-2.5 py-1 text-xs font-black uppercase", statusStyle[chain.status])}>
+                {chain.status}
+              </span>
+            </div>
+          ) : null}
         </div>
       </div>
 
       <div className="mt-5">
-        <DeadnessScoreGauge score={chain.deadnessScore} size="sm" />
+        <DeadnessScoreGauge
+          score={chain.deadnessScore}
+          botLikePercentage={chain.botActivityPercentage}
+          size="sm"
+        />
       </div>
 
       <div className="mt-5 grid grid-cols-2 border-l-2 border-t-2 border-app-line">

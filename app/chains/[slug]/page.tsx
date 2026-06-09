@@ -43,17 +43,18 @@ export default async function ChainDetailPage({ params }: { params: Promise<{ sl
 
       <section className="mt-8 grid gap-6 lg:grid-cols-[1fr_360px] lg:items-start">
         <div>
-          <p className="inline-flex items-center gap-2 border-[3px] border-app-line bg-app-surface px-3 py-1.5 text-sm font-black uppercase text-app-text shadow-[4px_4px_0_#000]">
-            {chain.ticker} chain profile
-          </p>
-          <h1 className="mt-5 break-words text-5xl font-black uppercase leading-[0.9] text-app-text sm:text-7xl">{chain.name}</h1>
+          <h1 className="break-words text-5xl font-black uppercase leading-[0.9] text-app-text sm:text-7xl">{chain.name}</h1>
           <p className="mt-5 max-w-2xl border-l-[6px] border-app-line pl-4 leading-7 text-app-muted">
             This score is an estimate based on on-chain behavior patterns. Automation is
             not always bad, but invisible automation changes the meaning of adoption.
           </p>
         </div>
         <div className="glass p-5">
-          <DeadnessScoreGauge score={chain.deadnessScore} size="lg" />
+          <DeadnessScoreGauge
+            score={chain.deadnessScore}
+            botLikePercentage={chain.botActivityPercentage}
+            size="lg"
+          />
           <div className="mt-5 border-[3px] border-app-line bg-app-elevated p-3">
             <p className="text-xs font-black uppercase text-app-muted">Weighted bot behavior score</p>
             <p className="mt-1 font-mono text-2xl font-black text-app-accent">{botScore}/100</p>

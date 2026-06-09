@@ -53,8 +53,10 @@ export default function MethodologyPage() {
           <div className="mt-5 space-y-3">
             {scoringLevels.map((level) => (
               <div key={level.range} className="border-[3px] border-app-line bg-app-surface p-4">
-                <div className="flex items-center justify-between gap-3">
-                  <p className="font-black uppercase text-app-text">{level.label}</p>
+                <div className={`flex items-center gap-3 ${level.label === "Watchlist" ? "justify-end" : "justify-between"}`}>
+                  {level.label !== "Watchlist" ? (
+                    <p className="font-black uppercase text-app-text">{level.label}</p>
+                  ) : null}
                   <span className="border-[3px] border-app-line bg-app-elevated px-2 py-1 text-sm font-black text-app-text">
                     {level.range}
                   </span>
