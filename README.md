@@ -78,21 +78,3 @@ Bots, AI agents, MEV systems, and automated tools are becoming increasingly comm
 
 Understanding the difference between activity and human participation may become one of the most important metrics in the future.
 
-## Project Vision
-
-We already measure:
-
-* TVL
-* Transactions
-* Active Wallets
-
-Maybe it's time to measure humans too.
-
----
-
-Built as an experiment.
-
-Built out of curiosity.
-
-Built to ask a question that most dashboards ignore.
-
