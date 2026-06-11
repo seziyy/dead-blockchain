@@ -36,8 +36,9 @@ export function DeadnessScoreGauge({ score, botLikePercentage, size = "md" }: De
       <div className="mt-3 h-4 border-[3px] border-app-line bg-app-elevated">
         <motion.div
           className="h-full bg-app-accent"
-          initial={{ width: 0 }}
+          initial={false}
           animate={{ width: `${normalized}%` }}
+          style={{ width: `${normalized}%` }}
           transition={{ duration: 0.9, ease: "easeOut" }}
         />
       </div>

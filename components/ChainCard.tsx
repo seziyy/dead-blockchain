@@ -17,8 +17,6 @@ const statusStyle = {
 export function ChainCard({ chain, index }: { chain: ChainMetric; index: number }) {
   return (
     <motion.article
-      initial={{ opacity: 0, y: 18 }}
-      animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.04 }}
       whileHover={{ x: -2, y: -2 }}
       className="glass group flex h-full w-[calc(100%-56px)] max-w-full flex-col overflow-hidden p-5 transition sm:w-auto"
