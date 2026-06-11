@@ -78,3 +78,6 @@ Bots, AI agents, MEV systems, and automated tools are becoming increasingly comm
 
 Understanding the difference between activity and human participation may become one of the most important metrics in the future.
 
+## License
+
+MIT License. See [LICENSE](./LICENSE).

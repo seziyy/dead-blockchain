@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "A Dune-ready dashboard estimating human versus automated blockchain activity.",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
